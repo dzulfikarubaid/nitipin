@@ -16,7 +16,7 @@ const Signup = () => {
   }
   const SignupSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:8000/api/register/', inputData, {
+    axios.post('https://nitipin.vercel.app/api/register/', inputData, {
       headers: {
         'X-CSRFToken': cookie.get('csrftoken')
       }

@@ -19,7 +19,7 @@ const Project = () => {
   }
   const postSubmit = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:8000/api/addpost/', inputData)
+    axios.post('https://nitipin.vercel.app/api/addpost/', inputData)
     .then((res) => {
       window.location.reload()
     })

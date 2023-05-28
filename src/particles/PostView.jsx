@@ -4,7 +4,7 @@ import axios from 'axios'
 const PostView = () => {
     const [posts, setPosts] = useState([])
     useEffect(() => {
-      axios.get('http://localhost:8000/api/post/')
+      axios.get('https://nitipin.vercel.app/api/post/')
       .then((res) => {
         setPosts(res.data)
         
