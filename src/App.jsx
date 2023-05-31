@@ -12,6 +12,11 @@ import About from "./pages/About"
 import Cookies from 'universal-cookie'
 import ProtectedRoute from "./particles/ProtectedRoute"
 import Logged from "./particles/Logged"
+import Profile from "./pages/Profile"
+import Error from "./pages/Error"
+import Map from "./particles/Map"
+import Dashboard from "./pages/Dashboard"
+
 
 
 function App() {
@@ -26,11 +31,18 @@ function App() {
           <Project />
       </ProtectedRoute>} >
       </Route>
+      <Route path="/profile" element={<ProtectedRoute>
+        <Profile />
+      </ProtectedRoute>}></Route>
       <Route path="/freelancer" element={<Freelancer />}></Route>
       <Route path="/login" element={<Logged><Login/></Logged>}></Route>
       <Route path="/signup" element={<Logged><Signup /></Logged>}></Route>
       <Route path="/about" element={<Logged><About /></Logged>}></Route>
-      <Route path="*" element={<p>There's nothing here: 404!</p>} />
+      <Route path="/map" element={<Map />}></Route>
+      <Route path="/dashboard" element={<ProtectedRoute>
+        <Dashboard />
+      </ProtectedRoute>}></Route>
+      <Route path="*" element={<Error />} />
     </Routes>
     </>
     

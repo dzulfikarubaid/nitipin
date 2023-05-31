@@ -6,6 +6,9 @@ const cssFileName = 'index.min.css'
 export default defineConfig({
   plugins: [react()],
   publicDir: './public',
+  define: {
+    'process.env': {}
+  },
   build: {
     rollupOptions: {
       output: {

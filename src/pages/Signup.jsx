@@ -68,7 +68,7 @@ const Signup = () => {
         name="c_password" 
         value={inputData.c_password} 
         onChange={handleData}/>
-        <button onClick={SignupSubmit} type="submit">Signup</button>
+        <button className='bg-blue-500 px-2 py-2 rounded-xl text-white hover:bg-blue-700 ' onClick={SignupSubmit} type="submit">Signup</button>
         <p>{error}</p>
       </form>
     </div>

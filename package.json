@@ -10,15 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@react-google-maps/api": "^2.18.1",
     "axios": "^1.4.0",
     "firebase": "^9.22.1",
     "framer-motion": "^10.12.10",
     "jsonwebtoken": "^9.0.0",
     "jwt-decode": "^3.1.2",
+    "leaflet": "^1.9.4",
+    "leaflet-control-geocoder": "^2.4.0",
+    "leaflet-routing-machine": "^3.2.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-dropdown": "^1.11.0",
     "react-icons": "^4.8.0",
+    "react-leaflet": "^4.2.1",
     "react-router-dom": "^6.11.1",
     "swiper": "^9.3.2",
     "universal-cookie": "^4.0.4"

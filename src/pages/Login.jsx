@@ -12,6 +12,7 @@ const Login = () => {
   }
   const LoginSubmit = (e) => {
     e.preventDefault()
+    
     axios.post('https://nitipin.vercel.app/api/login/', inputData, {
       headers: {
         'X-CSRFToken': cookie.get('csrftoken')
@@ -35,12 +36,13 @@ const Login = () => {
       }
     })
     }
+    
   return (
     <div className='mt-40 flex justify-center items-center'>
       <form className='flex flex-col w-1/3 gap-4 p-4 shadow-xl self-center'>
         <label htmlFor="email">Email</label>
         <input 
-        className='bg-gray-200 px-2'
+        className='bg-gray-200 px-2 rounded-xl'
         required
         type="email" 
         name="email" 
@@ -48,13 +50,13 @@ const Login = () => {
         onChange={handleData}/>
         <label htmlFor="password">Password</label>
         <input 
-        className='bg-gray-200 px-2' 
+        className='bg-gray-200 px-2 rounded-xl' 
         required
         type="password" 
         name="password" 
         value={inputData.password} 
         onChange={handleData}/>
-        <button onClick={LoginSubmit} type="submit">Login</button>
+        <button className='bg-blue-500 px-2 rounded-xl text-white' onClick={LoginSubmit} type="submit">Login</button>
         <p>{error}</p>
       </form>
     </div>
